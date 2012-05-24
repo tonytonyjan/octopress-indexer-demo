@@ -1,0 +1,10 @@
+{% if page.indexer == true %}
+  <section>
+  <h1>Catalog</h1>
+  {{ page.indexer_aside }}
+  </section>
+{% else %}
+  {% if site.page_asides.size %}
+    {% include_array default_asides %}
+  {% endif %}
+{% endif %}
